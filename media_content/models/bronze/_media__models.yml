@@ -15,7 +15,7 @@ models:
       - name: elt_load_timestamp
 
   - name: stg_mc__comments
-    description: "Bronze stging table for media content comments"
+    description: "Bronze staging table for media content comments"
     columns:
       - name: comment_id
         description: "The primary key for this table"
@@ -29,7 +29,7 @@ models:
       - name: elt_load_timestamp
 
   - name: stg_mc__photos
-    description: "Bronze stging table for media content photos"
+    description: "Bronze staging table for media content photos"
     columns:
       - name: photo_id
         description: "The primary key for this table"
@@ -43,7 +43,7 @@ models:
       - name: elt_load_timestamp
 
   - name: stg_mc__posts
-    description: "Bronze stging table for media content posts"
+    description: "Bronze staging table for media content posts"
     columns:
       - name: post_id
         description: "The primary key for this table"
@@ -56,7 +56,7 @@ models:
       - name: elt_load_timestamp
 
   - name: stg_mc__todos
-    description: "Bronze stging table for media content todos"
+    description: "Bronze staging table for media content todos"
     columns:
       - name: task_id
         description: "The primary key for this table"
@@ -69,7 +69,7 @@ models:
       - name: elt_load_timestamp
 
   - name: stg_mc__users
-    description: "Bronze stging table for media content users"
+    description: "Bronze staging table for media content users"
     columns:
       - name: user_id
         description: "The primary key for this table"
