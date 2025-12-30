@@ -1,0 +1,74 @@
+version: 2
+
+sources:
+  - name: app_raw
+    description: "schema to store ingested data from DLT"
+    tables:
+      - name: albums
+        description: "raw details about the media albums"
+        columns:
+          - name: id
+          - name: user_id
+          - name: title
+          - name: _dlt_load_id
+          - name: _dlt_id
+      - name: comments
+        description: "raw details about the media comments"
+        columns:
+          - name: id
+          - name: post_id
+          - name: name
+          - name: email
+          - name: body
+          - name: _dlt_load_id
+          - name: _dlt_id
+      - name: photos
+        description: "raw details about the media photos`"
+        columns:
+          - name: id
+          - name: album_id
+          - name: title
+          - name: url
+          - name: thumbnail_url
+          - name: _dlt_load_id
+          - name: _dlt_id
+      - name: posts
+        description: "raw details about the media post"
+        columns:
+          - name: id
+          - name: user_id
+          - name: title
+          - name: body
+          - name: _dlt_load_id
+          - name: _dlt_id
+      - name: todos
+        description: "raw details about the media todos"
+        columns:
+          - name: id
+          - name: user_id
+          - name: title
+          - name: completed
+          - name: _dlt_load_id
+          - name: _dlt_id
+      - name: users
+        description: "raw details about the media users"
+        columns:
+          - name: id
+          - name: name
+          - name: username
+          - name: email
+          - name: address__street
+          - name: address__suite
+          - name: address__city
+          - name: address__zipcode
+          - name: address__geo__lat
+          - name: address__geo__lng
+          - name: phone
+          - name: website
+          - name: company__name
+          - name: company__catch_phrase
+          - name: company__bs
+          - name: _dlt_load_id
+          - name: _dlt_id
+      
+        

@@ -1,0 +1,95 @@
+
+version: 2
+
+models:
+  - name: stg_mc__albums
+    description: "Bronze staging table for media content albums"
+    columns:
+      - name: album_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: user_id
+      - name: title
+      - name: elt_load_timestamp
+
+  - name: stg_mc__comments
+    description: "Bronze stging table for media content comments"
+    columns:
+      - name: comment_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: post_id
+      - name: name
+      - name: email
+      - name: body
+      - name: elt_load_timestamp
+
+  - name: stg_mc__photos
+    description: "Bronze stging table for media content photos"
+    columns:
+      - name: photo_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: album_id
+      - name: title
+      - name: url
+      - name: thumbnail_url
+      - name: elt_load_timestamp
+
+  - name: stg_mc__posts
+    description: "Bronze stging table for media content posts"
+    columns:
+      - name: post_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: user_id
+      - name: title
+      - name: body
+      - name: elt_load_timestamp
+
+  - name: stg_mc__todos
+    description: "Bronze stging table for media content todos"
+    columns:
+      - name: task_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: user_id
+      - name: title
+      - name: completed
+      - name: elt_load_timestamp
+
+  - name: stg_mc__users
+    description: "Bronze stging table for media content users"
+    columns:
+      - name: user_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: name
+      - name: username
+      - name: email
+      - name: address__street
+      - name: address__suite
+      - name: address__city
+      - name: address__zipcode
+      - name: address__geo__lat
+      - name: address__geo__lng
+      - name: phone
+      - name: website
+      - name: company__name
+      - name: company__catch_phrase
+      - name: company__bs
+      - name: elt_load_timestamp
+
+
