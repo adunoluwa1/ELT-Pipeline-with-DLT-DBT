@@ -1,0 +1,49 @@
+
+version: 2
+
+models:
+  - name: fct_user_engagement
+    description: "intermediate model for media content albums"
+    columns:
+      - name: user_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: total_posts
+      - name: total_comments
+      - name: total_albums
+      - name: total_photos
+      - name: total_tasks
+      - name: total_completed_tasks
+  - name: fct_post_performance
+    description: "N for media content albums"
+    columns:
+      - name: post_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: user_id
+      - name: comment_count
+  - name: fct_photo_album_richness
+    description: "N for media content albums"
+    columns:
+      - name: album_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: user_id
+      - name: photo_count
+  - name: task_completion
+    description: "N for media content albums"
+    columns:
+      - name: user_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: total_tasks
+      - name: completed_tasks
+      - name: completion_rate

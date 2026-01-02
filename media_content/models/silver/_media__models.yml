@@ -12,10 +12,10 @@ models:
           - not_null
       - name: user_id
         data_tests:
-          - relationship:
+          - relationships:
               arguments:
-              - to: ref('int_mc__users')
-              - field: user_id
+                to: ref('int_mc__users')
+                field: user_id
       - name: title
       - name: elt_load_timestamp
 
@@ -51,10 +51,10 @@ models:
             - not_null
       - name: post_id
         data_tests:
-          - relationship:
+          - relationships:
               arguments:
-              - to: ref('int_mc__posts')
-              - field: post_id
+                to: ref('int_mc__posts')
+                field: post_id
       - name: name
       - name: email
       - name: body
@@ -70,10 +70,10 @@ models:
           - not_null
       - name: user_id
         data_tests:
-          - relationship:
+          - relationships:
               arguments:
-              - to: ref('int_mc__users')
-              - field: user_id
+                to: ref('int_mc__users')
+                field: user_id
       - name: title
       - name: body
       - name: elt_load_timestamp
@@ -88,10 +88,10 @@ models:
           - not_null
       - name: album_id
         data_tests:
-          - relationship:
+          - relationships:
               arguments:
-              - to: ref('int_mc__albums')
-              - field: album_id
+                to: ref('int_mc__albums')
+                field: album_id
       - name: title
       - name: url
       - name: thumbnail_url
@@ -107,10 +107,10 @@ models:
           - not_null
       - name: user_id
         data_tests:
-          - relationship:
+          - relationships:
               arguments:
-              - to: ref('int_mc__users')
-              - field: user_id
+                to: ref('int_mc__users')
+                field: user_id
       - name: title
       - name: completed
       - name: elt_load_timestamp
