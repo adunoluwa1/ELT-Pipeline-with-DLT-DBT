@@ -16,6 +16,6 @@ SELECT
     address__geo__lng AS longitude,
     phone,
     website,
-    {{coalesce_and_initcap("company__name")}} AS company__name,
+    {{coalesce_and_initcap("company__name")}} AS company_name,
     {{dbt.current_timestamp()}} elt_load_timestamp
 FROM users

@@ -11,5 +11,5 @@ SELECT
     zipcode,
     phone,
     company_name,
-    elt_load_timestamp,
+    elt_load_timestamp
 FROM users
