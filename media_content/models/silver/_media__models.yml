@@ -114,6 +114,7 @@ models:
       - name: title
       - name: completed
         data_tests:
+          - not_null
           - accepted_values:
               arguments:
                 values: [0, 1]
