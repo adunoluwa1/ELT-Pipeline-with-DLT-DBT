@@ -5,7 +5,7 @@ WITH todos AS (
 SELECT
     user_id,
     COUNT(*) as total_tasks,
-    SUM(case when completed then 1 else 0 end) as completed_tasks,
+    SUM(case when completed then 1 else 0 end) as total_completed_tasks,
     ROUND(
         AVG(case when completed then 1 else 0 end) :: NUMERIC,
         2

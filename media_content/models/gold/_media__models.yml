@@ -42,7 +42,7 @@ models:
       - name: photo_count
       - name: last_updated
 
-  - name: task_completion
+  - name: fct_task_completion
     description: "Customer behavior analysis for media content todo tasks"
     columns:
       - name: user_id
@@ -51,7 +51,7 @@ models:
           - unique
           - not_null
       - name: total_tasks
-      - name: completed_tasks
+      - name: total_completed_tasks
       - name: completion_rate
       - name: last_updated
 
@@ -70,4 +70,4 @@ models:
       - name: zipcode
       - name: phone
       - name: company_name
-      - name: elt_load_timestamp
+      - name: last_updated
