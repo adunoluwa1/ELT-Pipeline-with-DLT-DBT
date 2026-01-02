@@ -3,7 +3,7 @@ version: 2
 
 models:
   - name: fct_user_engagement
-    description: "intermediate model for media content albums"
+    description: "User engagement model for media content users"
     columns:
       - name: user_id
         description: "The primary key for this table"
@@ -16,8 +16,10 @@ models:
       - name: total_photos
       - name: total_tasks
       - name: total_completed_tasks
+      - name: last_updated
+
   - name: fct_post_performance
-    description: "N for media content albums"
+    description: "mart model for media content post performance"
     columns:
       - name: post_id
         description: "The primary key for this table"
@@ -26,8 +28,10 @@ models:
           - not_null
       - name: user_id
       - name: comment_count
+      - name: last_updated
+
   - name: fct_photo_album_richness
-    description: "N for media content albums"
+    description: "album richness analysis for media content albums and photos"
     columns:
       - name: album_id
         description: "The primary key for this table"
@@ -36,8 +40,10 @@ models:
           - not_null
       - name: user_id
       - name: photo_count
+      - name: last_updated
+
   - name: task_completion
-    description: "N for media content albums"
+    description: "Customer behavior analysis for media content todo tasks"
     columns:
       - name: user_id
         description: "The primary key for this table"
@@ -47,3 +53,21 @@ models:
       - name: total_tasks
       - name: completed_tasks
       - name: completion_rate
+      - name: last_updated
+
+  - name: dim_users
+    description: "mart layer for media content users"
+    columns:
+      - name: user_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: full_name
+      - name: email
+      - name: street
+      - name: city
+      - name: zipcode
+      - name: phone
+      - name: company_name
+      - name: elt_load_timestamp
