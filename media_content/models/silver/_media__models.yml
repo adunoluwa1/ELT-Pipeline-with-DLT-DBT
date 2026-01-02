@@ -113,4 +113,8 @@ models:
                 field: user_id
       - name: title
       - name: completed
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [0, 1]
       - name: elt_load_timestamp
