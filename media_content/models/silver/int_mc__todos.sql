@@ -6,7 +6,7 @@ WITH todos AS (
 SELECT
     task_id,
     user_id,
-    title,
+    {{coalesce_and_initcap("title")}} AS title,
     completed,
     {{dbt.current_timestamp()}} elt_load_timestamp
 FROM todos

@@ -89,7 +89,7 @@ models:
       - name: album_id
         data_tests:
           - relationship:
-            arguments:
+              arguments:
               - to: ref('int_mc__albums')
               - field: album_id
       - name: title
@@ -108,7 +108,7 @@ models:
       - name: user_id
         data_tests:
           - relationship:
-            arguments:
+              arguments:
               - to: ref('int_mc__users')
               - field: user_id
       - name: title

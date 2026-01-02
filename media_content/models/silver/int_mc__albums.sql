@@ -6,6 +6,6 @@ WITH albums AS (
 SELECT 
     album_id,
     user_id,
-    title,
+    {{coalesce_and_initcap("title",'Unknown')}} AS title,
     {{dbt.current_timestamp()}} elt_load_timestamp
 FROM albums

@@ -5,17 +5,17 @@ WITH users AS (
 
 SELECT 
     user_id,
-    name AS full_name,
+    {{coalesce_and_initcap("name")}} AS full_name,
     username,
-    email,
-    address__street AS street,
-    address__suite AS suite,
-    address__city AS city,
-    address__zipcode AS zipcode,
+    LOWER(email) email,
+    {{coalesce_and_initcap("address__street")}} AS street,
+    {{coalesce_and_initcap("address__suite")}} AS suite,
+    {{coalesce_and_initcap("address__city")}} AS city,
+    {{coalesce_and_initcap("address__zipcode",'')}} AS zipcode,
     address__geo__lat AS latitude,
     address__geo__lng AS longitude,
     phone,
     website,
-    company__name,
+    {{coalesce_and_initcap("company__name")}} AS company__name,
     {{dbt.current_timestamp()}} elt_load_timestamp
 FROM users

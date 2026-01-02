@@ -6,7 +6,7 @@ WITH posts AS (
 SELECT
     post_id,
     user_id,
-    title,
-    body,
+    {{coalesce_and_initcap("title")}} AS title,
+    {{coalesce_and_initcap("body")}} AS body,
     {{dbt.current_timestamp()}} elt_load_timestamp
 FROM posts
